@@ -28,7 +28,7 @@
     </servlet-mapping>
     
     <!-- 2.Setting the filter -->
-    <filter>
+    <!-- <filter>
         <filter-name>securityFilter</filter-name>
         <filter-class>website.filter.SecurityFilter</filter-class>
     </filter>
@@ -36,5 +36,24 @@
         <filter-name>securityFilter</filter-name>
         <url-pattern>*</url-pattern>
         <dispatcher>REQUEST</dispatcher>
-    </filter-mapping>    
+    </filter-mapping>-->
+    
+    <filter>
+        <filter-name>imageRedirectFilter</filter-name>
+        <filter-class>website.filter.ImageRedirectFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>imageRedirectFilter</filter-name>
+        <url-pattern>/image/*</url-pattern>
+    </filter-mapping>
+    
+    <filter>
+        <filter-name>encodingFilter</filter-name>
+        <filter-class>website.filter.EncodingFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>encodingFilter</filter-name>
+        <url-pattern>/encodingTest.do</url-pattern>
+    </filter-mapping>
+    
 </web-app>

@@ -73,7 +73,6 @@ public class LoginController {
     public ModelAndView handleLogout(HttpServletRequest request, HttpServletResponse response) throws Exception {
         request.getSession().removeAttribute("Authorise");
         return new ModelAndView("login");
-
     }
 
 }

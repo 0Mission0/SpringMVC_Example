@@ -13,6 +13,7 @@
 <title>Main Page - Web Site Practice</title>
 </head>
 <body>
+<img src="image/logo.png" />
 <div id="welcome">
 Hi, ${name}. Welcome to Web Site Practice. <a href="logout.do">登出</a>
 </div>

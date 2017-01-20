@@ -24,7 +24,8 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>dispatcherServlet</servlet-name>
-        <url-pattern>*.do</url-pattern>
+        <!--<url-pattern>*.do</url-pattern>--> <!-- For static html page, we can not only set .do -->
+        <url-pattern>/</url-pattern>
     </servlet-mapping>
     
     <!-- 2.Setting the filter -->
@@ -54,6 +55,15 @@
     <filter-mapping>
         <filter-name>encodingFilter</filter-name>
         <url-pattern>/encodingTest.do</url-pattern>
+    </filter-mapping>
+    
+    <filter>
+        <filter-name>exceptionHandleFilter</filter-name>
+        <filter-class>website.filter.ExceptionHandleFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>exceptionHandleFilter</filter-name>
+        <url-pattern>/exceptionTest.do</url-pattern>
     </filter-mapping>
     
 </web-app>

@@ -55,6 +55,7 @@
     <filter-mapping>
         <filter-name>encodingFilter</filter-name>
         <url-pattern>/encodingTest.do</url-pattern>
+        <url-pattern>/jstl.do</url-pattern>
     </filter-mapping>
     
     <filter>

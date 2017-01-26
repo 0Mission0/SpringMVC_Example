@@ -16,7 +16,7 @@ import website.model.impl.Person;
 public class JSPController {
 
     @RequestMapping("/jstl.do")
-    public ModelAndView handleLogin(HttpServletRequest request, HttpServletResponse response) throws Exception {
+    public ModelAndView showJSTLExample(HttpServletRequest request, HttpServletResponse response) throws Exception {
         if (request.getParameter("list") != null) {
             ArrayList<Person> people = new ArrayList<Person>();
             Person person1 = new Person("1", "User1", "19", "Male", "台北市板橋區四川路一段一號");
@@ -27,6 +27,16 @@ public class JSPController {
             session.setAttribute("people", people);
         }
         return new ModelAndView("jstl");
+    }
+
+    @RequestMapping("/fmt.do")
+    public ModelAndView showFMTExample(HttpServletRequest request, HttpServletResponse response) throws Exception {
+        return new ModelAndView("fmt");
+    }
+
+    @RequestMapping("/setLocale.do")
+    public ModelAndView showSetLocaleExample(HttpServletRequest request, HttpServletResponse response) throws Exception {
+        return new ModelAndView("setLocale");
     }
 
 }

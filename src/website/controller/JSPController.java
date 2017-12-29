@@ -39,4 +39,9 @@ public class JSPController {
         return new ModelAndView("setLocale");
     }
 
+    @RequestMapping("/setTimezone.do")
+    public ModelAndView showSetTimeZoneExample(HttpServletRequest request, HttpServletResponse response) throws Exception {
+        return new ModelAndView("setTimeZone");
+    }
+
 }
